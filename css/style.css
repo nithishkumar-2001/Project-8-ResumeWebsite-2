@@ -1,0 +1,177 @@
+@font-face {
+    font-family: "poppins";
+    src: url(../assets/Poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: "poppins";
+    src: url(../assets/Poppins/Poppins-Regular.ttf);
+}
+
+body {
+    font-family: "poppins";
+    font-weight: 20px;
+    background: #000;
+}
+
+.bgcolor1 {
+    background-color: rgb(23, 21, 21);
+}
+
+.hov {
+    border-radius: 5px;
+}
+
+.hov:hover {
+    background: linear-gradient(to left, rgb(255, 1, 60), rgb(255, 58, 104));
+    color: white !important;
+    transition: all 3s;
+
+}
+
+
+.fs1 {
+    font-size: 75px;
+    font-weight: bolder;
+}
+
+.fs2 {
+    font-size: 40px;
+}
+
+.mt0 {
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.underline {
+    border-bottom: 2px solid rgba(249, 54, 90, 0.862);
+    color: rgba(253, 38, 77, 0.862);
+    font-weight: bold;
+}
+
+.underline1 {
+    border-bottom: 2px solid gray;
+    color: rgba(253, 38, 77, 0.862);
+    font-weight: bold;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    background-color: black;
+    color: red;
+}
+
+.parent {
+    background: url("../assets/images/portfolio-1.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+
+}
+.parent1 {
+    background: url("../assets/images/portoflio\ 8.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+}
+.parent2 {
+    background: url("../assets/images/porfolio\ 7.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+}
+.parent3 {
+    background: url("../assets/images/portfolio10.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+}
+.parent4 {
+    background: url("../assets/images/portoflio\ 8.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+}
+.parent5 {
+    background: url("../assets/images/portfolio10.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+}
+.parent6 {
+    background: url("../assets/images/blog-01.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+}
+.parent7 {
+    background: url("../assets/images/blog-02.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+    
+}
+.parent8 {
+    background: url("../assets/images/blog-03.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+   
+}
+.margintop {
+    padding-top: 300px;
+}
+.center{
+    display: flex;
+    justify-content: center;
+}
+.circle{
+    width: 50px ;
+    height: 50px;
+    border: 1px solid gray;
+    border-radius: 50px;
+    text-align: center;
+    padding-top: 15px;
+}
+.circle:hover{
+    background-color:rgb(255, 58, 104) ;
+}
+.active, .nav1:hover:hover{
+    border-bottom: rgb(255, 58, 104);
+}
+.nav1{
+    border-bottom:1px solid rgb(255, 58, 104);
+    outline: none;
+    border-radius: 20px;
+    cursor: pointer;
+
+}
+
+
+@media (max-width:992px) {
+
+    .fs1 {
+        font-size: 40px !important;
+        text-align: center;
+    }
+
+    .fs2 {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .w100 {
+        width: 100%;
+    }
+}
+
+@media(min-width:992px) {
+    .mt0 {
+        height: 650px;
+    }
+}
