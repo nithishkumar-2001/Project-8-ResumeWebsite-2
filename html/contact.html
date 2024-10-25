@@ -8,6 +8,15 @@
     <link rel="stylesheet" href="../assets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../assets/bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "XJzRFntlEA8Ro1j3Z",
+            });
+        })();
+    </script>
 </head>
 
 <body>
@@ -115,17 +124,19 @@
                         <div class="text-secondary">01923 088574 or email: admin@example.com </div>
                     </div>
                     <div class="">
-                        <input class="form-control my-3" type="text" placeholder="Your Name*">
-                        <input class="form-control my-3" type="text" placeholder="Your Email*">
-                        <input class="form-control  my-3" type="text" placeholder="Write A Subject">
+                        <input class="form-control my-3" type="text" placeholder="Your Name*" id="name">
+                        <input class="form-control my-3" type="email" placeholder="Your Email*" id="email">
+                        <input class="form-control my-3" type="text" placeholder="Your number*" id="mobile">
+                        <input class="form-control  my-3" type="text" placeholder="Write A Subject" id="subject">
                         <div class="form-group">
                             <label for="exampleFormControlTextarea1"></label>
-                            <textarea class="form-control " placeholder="Your Message*" id="exampleFormControlTextarea1"
+                            <textarea class="form-control " placeholder="Your Message*" id="message"
                                 rows="4"></textarea>
                         </div>
                     </div>
                     <div class="d-flex">
-                        <a href="" class="btn btn-outline-danger my-4 px-4">Shop Now</a>
+                        <!-- <a href="" class="btn btn-outline-danger my-4 px-4" onclick="sendMail()">Submi</a> -->
+                        <button type="submit" onclick="sendMail()">submit</button>
                     </div>
                 </div>
                 <div class="col-12 col-lg-6 order-sm-1 order-lg-0">
@@ -160,7 +171,22 @@
     </section>
     <script src="../assets/bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
 
-
+    <script>
+        function sendMail() {
+            console.log('mail is working');
+            alert('mail function enters')
+            let params = {
+                email:document.getElementById('email').value,
+                to_name:document.getElementById('name').value,
+                from_name:'testing',
+                mobile:document.getElementById('mobile').value,
+                subject:document.getElementById('subject').value,
+                message:document.getElementById('message').value,
+            }
+            // emailjs.send('service_cuzefzq', 'template_11t1xvd', params).then(alert('Email sent'))
+            emailjs.send("service_cuzefzq","template_11t1xvd", params).then(alert('Email sent'))
+        }
+    </script>
 </body>
 
 </html>
