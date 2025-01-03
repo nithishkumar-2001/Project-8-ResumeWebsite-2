@@ -14,6 +14,7 @@ body {
     background: #000;
 }
 
+
 .bgcolor1 {
     background-color: rgb(23, 21, 21);
 }
@@ -40,20 +41,10 @@ body {
 }
 
 .mt0 {
-
-
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-
-
-.underline {
-    border-bottom: 2px solid rgba(249, 54, 90, 0.862);
-    color: rgba(253, 38, 77, 0.862);
-    font-weight: bold;
-}
-
 .underline1 {
     border-bottom: 2px solid gray;
     color: rgba(253, 38, 77, 0.862);
@@ -136,10 +127,11 @@ body {
     border: 1px solid gray;
     border-radius: 50px;
     text-align: center;
-    padding-top: 15px;
+    padding-top:15px !important;
 }
 .circle:hover{
     background-color:rgb(255, 58, 104) ;
+    border: none;
 }
 .active, .nav1:hover:hover{
     border-bottom: rgb(255, 58, 104);
@@ -151,7 +143,19 @@ body {
     cursor: pointer;
 
 }
-
+.underlines{
+    border-bottom: 2px solid red !important;
+    width: 20% !important;
+    display: block;
+}
+.underlines:hover{
+    width: 100% !important;
+    transition: all 1s !important;
+}
+.underlin{
+    border-bottom: 2px solid red !important;
+    width: 20% !important;
+}
 @media (max-width:992px) {
 
     .fs1 {
@@ -167,10 +171,19 @@ body {
     .w100 {
         width: 100%;
     }
+    .small{
+        padding-left: 210px;
+        } 
+    
 }
 
 @media(min-width:992px) {
     .mt0 {
         height: 650px;
     }
+}
+@media (max-width:576px) {
+    .small{
+        padding-left: 40px;
+        } 
 }
